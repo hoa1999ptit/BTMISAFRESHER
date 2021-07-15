@@ -1,0 +1,22 @@
+.button {
+    height: 40px;
+    border: radius 4px;
+    color: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    box-sizing: unset;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #2FBE8E;
+}
+
+button.button:active {
+    background-color: #019160;
+}
+
+button .button:focus {
+    background-color: #01B075;
+}

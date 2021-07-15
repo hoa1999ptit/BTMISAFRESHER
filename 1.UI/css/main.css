@@ -1,0 +1,21 @@
+@import url('../css/base/button.css');
+@import url('../css/base/text-box.css');
+body {
+    font-family: GoogleSans;
+    font-size: 13px;
+}
+
+@font-face {
+    font-family: GoogleSans;
+    src: url('/content/font/GoogleSans-Regular.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Bold;
+    src: url('/content/font/GoogleSans-Bold.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Italic;
+    src: url('/content/font/GoogleSans-Italic.otf');
+}

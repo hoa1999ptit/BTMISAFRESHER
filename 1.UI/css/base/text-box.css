@@ -1,0 +1,22 @@
+.text-box {
+    height: 40px;
+    border: 1px solid #bbbbbb;
+    padding-left: 16px;
+    padding: right 16px;
+    outline: none;
+    border-radius: 4px;
+}
+
+.text-box-default:focus {
+    border-color: #019160;
+}
+
+
+/* .text-box-default .text-box-default-icon {
+    padding: left 10px right 10px;
+} */
+
+
+/* .text-box-default .text-box-default-error {
+    border-color: #FF4747;
+} */

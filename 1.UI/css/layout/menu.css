@@ -1,0 +1,28 @@
+.menu {
+    width: 225px;
+    height: calc( 100vh - 40px);
+    border-right: 1px solid #BBBBBB;
+}
+
+.menu .menu-item {
+    height: 44px;
+    width: 100%;
+    align-items: center;
+    /* background-color: #019160; */
+    color: #fff;
+    padding-left: 16px;
+    box-sizing: border-box;
+}
+
+.menu .menu-item:hover {
+    background-color: #5e5e5e;
+    color: #000;
+}
+
+.menu .menu-item .menu-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url('../../content/icon/dashboard.png');
+    background-size: contain;
+}

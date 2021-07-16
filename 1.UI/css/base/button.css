@@ -13,69 +13,34 @@
     background-color: #2FBE8E;
 }
 
-button.button:active {
+.button.button:active {
     background-color: #019160;
 }
 
-button .button:focus {
+.button .button:focus {
     background-color: #01B075;
 }
 
-.misa-btn-icon-default.active>i {
-    padding-right: 8px;
+button.button {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    outline: none;
+    boder: none;
 }
 
-.misa-btn-icon {
-    border-radius: 4px;
-    height: 40px;
-    font-size: 13px;
-    font-family: 'GoogleSans-Regular';
-    padding: 0 16px;
-    text-align: left;
-    color: #ffffff;
-    border: none;
-    min-width: 100px;
+.button .btn-icon {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    display: block;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
-.misa-btn-icon-default {
-    background-color: #019160;
-}
-
-.misa-btn-icon-default>i {
-    padding-right: 8px;
-}
-
-.misa-btn-icon-default:hover {
-    background-color: #2FBE8E;
-}
-
-.misa-btn-icon-default.active {
-    background-color: #01B075;
-}
-
-.misa-btn-icon-default.active>i {
-    padding-right: 8px;
-}
-
-.misa-white-btn {
-    border-radius: 4px;
-    height: 40px;
-    font-size: 13px;
-    font-family: 'GoogleSans-Regular';
-    padding: 0 24px;
-    text-align: center;
-    color: #000000;
-    border: 1px solid #bbbbbb;
-    min-width: 100px;
-}
-
-.misa-white-btn:hover {
-    background-color: #E9EBEE;
-    border: none;
-}
-
-.misa-white-btn.active {
-    background-color: #01B075;
-    color: #ffffff;
-    border: none;
+.button .btn-icon-employee {
+    background-image: url('../../content/icon/add.png');
 }

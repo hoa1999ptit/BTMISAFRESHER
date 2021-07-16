@@ -1,21 +1,26 @@
-.misa-tbl {
+/* core table */
+
+.tbl {
     width: 100%;
     border-collapse: collapse;
+    font-size: 13px;
 }
 
-.misa-tbl>thead {
+.tbl th,
+td {
+    border-bottom: 1px solid #e5e5e5;
+    height: 48px;
+    padding: 0 10px;
     text-align: left;
 }
 
-.misa-tbl tr {
-    height: 48px;
+.tbl th>i {
+    padding: 0 8px;
 }
 
-th,
-td {
-    border-bottom: 1px solid #bbbbbb;
-}
-
-.misa-tbl>tbody>tr:nth-child(odd) {
+.tbl-striped tbody tr:nth-child(odd) {
     background-color: #e5e5e5;
 }
+
+
+/* end core table */

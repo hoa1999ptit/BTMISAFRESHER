@@ -1,46 +1,51 @@
-.button {
+/* core btn */
+
+.btn-icon {
     height: 40px;
-    border: radius 4px;
-    color: #fff;
-    padding-left: 24px;
-    padding-right: 24px;
-    text-align: center;
-    box-sizing: unset;
-    display: inline-block;
+    background-color: #019160;
+    outline: none;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 0 16px;
+    min-width: 100px;
+    font-family: 'GoogleSans-Regular';
 }
 
-.button:hover {
+.btn-icon>i {
+    padding-right: 8px;
+}
+
+.btn-icon:hover {
     background-color: #2FBE8E;
 }
 
-.button.button:active {
-    background-color: #019160;
+.btn-icon:focus {
+    background-color: #01b075;
 }
 
-.button .button:focus {
-    background-color: #01B075;
+.btn-default {
+    border: 1px solid #bbbbbb;
+    padding: 0 24px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 40px;
+    min-width: 100px;
+    font-size: 13px;
 }
 
-button.button {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    outline: none;
-    boder: none;
+.btn-default:hover {
+    border: none;
+    background-color: #E9EBEE;
 }
 
-.button .btn-icon {
-    width: 16px;
-    height: 16px;
-    border: 1px solid #bbb;
-    box-sizing: border-box;
-    display: block;
-    margin-right: 8px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.btn-default:focus {
+    background-color: #01b075;
+    border: none;
+    color: #ffffff;
 }
 
-.button .btn-icon-employee {
-    background-image: url('../../content/icon/add.png');
-}
+
+/* end core btn */

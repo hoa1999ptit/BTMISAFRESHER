@@ -1,0 +1,28 @@
+.avatar-box {
+    padding: 0 24px;
+}
+
+.avatar-site {
+    background: url('/content/img/default-avatar.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+}
+
+.col-item {
+    width: 100%;
+    padding: 8px 0;
+}
+
+.col-item .input {
+    width: 100%;
+}
+
+#detail-employee {
+    display: none;
+}

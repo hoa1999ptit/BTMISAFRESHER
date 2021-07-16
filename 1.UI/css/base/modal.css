@@ -1,8 +1,8 @@
+/* core modal */
+
 .modal {
-    display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -12,17 +12,61 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
+.modal>.container {
     background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 4px;
+    padding: 0;
+    position: relative;
+    display: block;
+}
+
+.modal-header {
+    padding: 24px;
+}
+
+.close-modal-site {
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    background-color: #e5e5e5;
+    text-align: center;
 }
 
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
 }
+
+.modal-content {}
+
+.modal-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    display: flex;
+    background: #e5e5e5;
+}
+
+.modal-action {
+    align-self: center;
+    margin-left: auto;
+    padding: 0 24px;
+}
+
+.action-box>button {
+    margin-left: 16px;
+}
+
+
+/* end core modal */

@@ -1,0 +1,50 @@
+.m-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #E9EBEE;
+    background-color: #fff;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+}
+
+.m-dialog .dialog--modal {
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000000;
+    z-index: 5px;
+}
+
+.m-dialog .dialog-content {
+    background-color: #fff;
+    z-index: 1000;
+    border: radius 5px;
+}
+
+.m-dialog .dialog-header {
+    display: flex;
+    padding: 24px 24px 0px 24px;
+    cursor: mouse;
+}
+
+.m-dialog .dialog-header .dialog-header-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.m-dialog .dialog-header .dialog-header-close:hover {
+    border-radius: 5px;
+}
+
+.m-dialog .dialog-header .dialog-header-close button {
+    width: 40px;
+    height: 40px;
+    border-radius: 0 5px 0 0;
+    border: none;
+    outline: none;
+}

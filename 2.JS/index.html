@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhân viên</title>
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+    <div class="main-section">
+        <div class="header">
+            <div class="header-left">
+                <div class="toggle"></div>
+                <div class="logo"></div>
+            </div>
+            <div class="header-right">
+                <div class="store-selector">
+                    <div class="store-logo icon-store">BĐ</div>
+                    <div class="dropdown store">
+                        <div class="choice">
+                            <div class="divtext">Nhà hàng Biển Đông </div>
+                            <div class="arrow-zone">
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="itemwrapper">
+                            <div class="item selected">Nhà hàng Biển Đông </div>
+                            <div class="item">Nhà hàng Biển Tây</div>
+                            <div class="item">Nhà hàng Biển Nam</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user">
+                    <!-- <div class="user-notification icon-notification"></div>
+                    <div class="reddot"></div> -->
+                    <div class="user-avatar"></div>
+                    <div class="user-fullname">Đào Hòa</div>
+                    <div class="user-function"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-item">
+                <div class="menu-item-icon icon-dashboard"></div>
+                <div class="menu-item-text">Tổng quan</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-report"></div>
+                <div class="menu-item-text">Báo cáo</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-buy"></div>
+                <div class="menu-item-text">Mua hàng</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-employee"></div>
+                <div class="menu-item-text">Danh mục nhân viên</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon icon-setting"></div>
+                <div class="menu-item-text">Thiết lập hệ thống</div>
+            </div>
+            <div class="toggle-menu icon-white-prev"></div>
+        </div>
+        <div class="content">
+            <div class="content-header">
+                <div class="title">Danh sách nhân viên</div>
+                <button class="button btn-icon add-employee">Thêm nhân viên</button>
+            </div>
+            <div class="toolbar">
+                <div class="filter">
+                    <div class="searchbox">
+                        <input type="text" class="searchfield icon-search" id="searchfield" placeholder="Tìm theo mã, Tên hoặc Số điện thoại" />
+                        <div class="clearchoice icon-clear"></div>
+                        <!-- <div class="search-icon"></div>-->
+                        <!-- <input type="text" id="searchfield" placeholder="Tìm theo mã, Tên hoặc Số điện thoại" />  -->
+                    </div>
+                    <div class="dropdown division">
+                        <div class="choice">
+                            <div class="divtext">Tất cả phòng ban </div>
+                            <div class="clearchoice icon-clear"></div>
+                            <div class="arrow-zone">
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="itemwrapper division">
+                            <div class="item selected">Tất cả phòng ban </div>
+                            <!-- <div class="item">My Phòng Nhân sự</div>
+                            <div class="item">My Phòng Marketting</div>
+                            <div class="item">My Phòng Kế toán</div>
+                            <div class="item">My Phòng Sản xuất</div> -->
+                        </div>
+                    </div>
+                    <div class="dropdown position">
+                        <div class="choice">
+                            <div class="divtext">Tất cả vị trí </div>
+                            <div class="clearchoice icon-clear"></div>
+                            <div class="arrow-zone">
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="itemwrapper">
+                            <div class="item selected">Tất cả vị trí </div>
+                            <!-- <div class="item ">Trưởng phòng </div>
+                            <div class="item ">Phó phòng</div>
+                            <div class="item"> Nhân viên</div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="button icon-refresh"></div>
+            </div>
+            <div class="table-wrapper">
+                <table id="table-employee" class="table-employee">
+                    <thead>
+                        <tr>
+                            <!-- <th></th> -->
+                            <th>STT</th>
+                            <th>Mã nhân viên</th>
+                            <th>Họ và tên</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                            <th>Điện thoại</th>
+                            <th>Email</th>
+                            <th>Chức vụ</th>
+                            <th>Phòng ban</th>
+                            <th class="money">Mức lương cơ bản</th>
+                            <th>Tình trạng công việc</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-navigator">
+                <div class="number-total-info">
+                    <p>Hiển thị</p>
+                    <div class="number-total">1-10/1000</div>
+                    <p>nhân viên</p>
+                </div>
+                <div class="navigation-button">
+                    <div class="button first-page"></div>
+                    <div class="button previous-page"></div>
+                    <div class="button page-number selected">1</div>
+                    <div class="button page-number">2</div>
+                    <div class="button page-number">3</div>
+                    <div class="button next-page"></div>
+                    <div class="button last-page"></div>
+                </div>
+                <div class="per-page-adjust">
+                    <div class="count">10</div>
+                    <div>nhân viên/trang</div>
+                    <div class="adjust-zone">
+                        <div class="btn increase icon-up"></div>
+                        <div class="btn decrease icon-down"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="popup add-employee" formmode="0" empid="notexist">
+
+        <div class="header">
+            <div class="title">THÔNG TIN NHÂN VIÊN</div>
+            <div class="btn-close"></div>
+        </div>
+        <div class="employee-info">
+            <div class="avatar">
+                <div class="avatar-image"></div>
+                <p>(Vui lòng chọn ảnh có định</p>
+                <p>dạng</p>
+                <p>.jpg, .jpeg, .png, .gif.)</p>
+                <input type="file" name="avatar-file" id="avatar-file" />
+            </div>
+            <div class="detail">
+                <div class="general-detail">
+                    <div class="title">A. THÔNG TIN CHUNG</div>
+                    <div class="hs"></div>
+                    <div class="grid">
+                        <div class="grid-row">
+                            <div class="grid-col">
+                                <label class="col-label">Mã nhân viên(<span class="required">*</span>)</label>
+                                <input id="EmployeeCode" class="field-input " tabindex="1" value="NV956" placeholder="NV0000" required></input>
+                            </div>
+                            <div class="grid-col">
+                                <label class="col-label">Họ và tên(<span class="required">*</span>)</label>
+                                <input id="FullName" class="field-input " tabindex="2" value="" required></input>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col">
+                                <label class="col-label">Ngày sinh</label>
+                                <input id="DateOfBirth" type="date" class="field-input" tabindex="3" value=""></input>
+                            </div>
+                            <div class="grid-col">
+                                <label class="col-label">Giới tính</label>
+                                <div class="dropdown select-gender">
+                                    <div class="choice">
+                                        <div id="GenderName" class="divtext" tabindex="4"></div>
+                                        <div class="clearchoice icon-clear"></div>
+                                        <div class="arrow-zone">
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="itemwrapper gender" value='2'>
+                                        <div class="item" value='1'>Nam</div>
+                                        <div class="item" value='0'>Nữ</div>
+                                        <!-- <div class="item" value='0'>Không xác định</div> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col">
+                                <label class="col-label">Số CMTND/ Căn cước (<span class="required">*</span>)
+                                    <input id="IdentityNumber" class="field-input" tabindex='5' required value=""
+                                        placeholder=""></input>
+                            </div>
+                            <div class="grid-col">
+                                <label class="col-label">Ngày cấp</label>
+                                <input id="IdentityDate" type="date" class="field-input" tabindex="6" value=""></input>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col">
+                                <label class="col-label">Nơi cấp</label>
+                                <input id="IdentityPlace" class="field-input" tabindex="7" value=""></input>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col">
+                                <label class="col-label">Email (<span class="required">*</span>)</label>
+                                <input id="Email" class="field-input" tabindex="8" required value="" placeholder=""></input>
+                            </div>
+                            <div class="grid-col">
+                                <label class="col-label">Số điện thoại (<span class="required">*</span>)</label>
+                                <input id="PhoneNumber" class="field-input " tabindex="9" required value=""></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-detail">
+                    <div class="title">B. THÔNG TIN CÔNG VIỆC</div>
+                    <div class="hs"></div>
+                    <div class="grid">
+                        <div class="grid-row">
+                            <div class="grid-col">
+                                <label class="col-label">Vị trí</label>
+                                <div class="dropdown position">
+                                    <div class="choice">
+                                        <div id="PositionName" class="divtext" tabindex="10"></div>
+                                        <div class="clearchoice icon-clear"></div>
+                                        <div class="arrow-zone">
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="itemwrapper">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-col">
+                                <label class="col-label">Phòng ban</label>
+                                <div class="dropdown division">
+                                    <div class="choice">
+                                        <div id="DepartmentName" class="divtext" tabindex="11"> </div>
+                                        <div class="clearchoice icon-clear"></div>
+                                        <div class="arrow-zone">
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="itemwrapper">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col">
+                                <label class="col-label">Mã số thuế cá nhân </label>
+                                <input id="PersonalTaxCode" class="field-input" tabindex="12" value=""></input>
+                            </div>
+                            <div class="grid-col">
+                                <label class="col-label">Mức lương cơ bản</label>
+                                <div class="money-input">
+                                    <input id="Salary" class="field-input money" maxlength="12" tabindex="13" value=""></input>
+                                    <div class="currency">(VND) </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col">
+                                <label class="col-label">Ngày gia nhập công ty</label>
+                                <input id="JoinDate" type="date" class="field-input" tabindex="14" value="2020-07-12"></input>
+                            </div>
+                            <div class="grid-col">
+                                <label class="col-label">Tình trạng công việc</label>
+                                <div class="dropdown job-status">
+                                    <div class="choice">
+                                        <div id="WorkStatus" class="divtext" tabindex="15" id="job-status">Đang làm việc
+                                        </div>
+                                        <div class="clearchoice icon-clear"></div>
+                                        <div class="arrow-zone">
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="itemwrapper status">
+                                        <div class="item" value="0">Chờ phỏng vấn</div>
+                                        <div class="item selected" value="1">Đang làm việc</div>
+                                        <div class="item" value="2">Đã nghỉ việc</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+            <button class="button btn-save icon-save" tabindex="16">Lưu</button>
+            <button class="button btn-cancel" tabindex="17">Hủy</button>
+
+        </div>
+    </div>
+    <!-- <div class="deleteConfirm"></div> -->
+    <!-- Phần thư viện -->
+    <script src="../js/lib/jquery.min.js"></script>
+
+    <!-- Phần dùng chung -->
+    <script src="../js/common/common.js"></script>
+    <script src="../js/base/dropdown.js"></script>
+    <script src="../js/base/field-input.js"></script>
+    <script src="../js/layout/menu.js"></script>
+
+    <!-- Phần riêng  -->
+    <script src="../js/pages/employee.js"></script>
+    <script src="../js/pages/add-employee.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+button:active {
+    background-color: #01b075;
+}
+
+button:focus {
+    background-color: #01b075;
+}
+
+.button {
+    height: 40px;
+    width: 40px;
+    /* min-width: 100px; */
+    /* display: inline-block; */
+    border-radius: 4px;
+    color: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    background-color: #019160;
+    background-repeat: no-repeat;
+    line-height: 40px;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    background-color: #2FBE8E;
+}
+
+.button:focus {
+    background-color: #01b075;
+}
+
+.button.selected {
+    background-color: #019160;
+}
+
+.button.btn-icon {
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: 16px center;
+    border: 0;
+    padding: 0 16px 0 40px;
+}
+
+
+/* .clearchoice.icon-clear {
+    margin-top: 11px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #E9EBEE;
+    background-size: 12px 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box; 
+    visibility: hidden;
+} */

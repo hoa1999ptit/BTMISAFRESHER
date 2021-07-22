@@ -1,0 +1,122 @@
+.page-navigator .navigation-button {
+    /* margin-top: 13px; */
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.navigation-button .button {
+    height: 32px;
+    width: 32px;
+    min-width: none !important;
+    padding: 0;
+    margin-top: 13px;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-color: #E9EBEE;
+    background-position-x: center;
+    background-position-y: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navigation-button .button:hover {
+    background-color: #fff;
+}
+
+.navigation-button .button:active {
+    background-color: #019160;
+}
+
+.navigation-button .button.selected {
+    background-color: #019160;
+    color: #ffffff;
+}
+
+.button.first-page {
+    background-image: url("../../content/icon/btn-firstpage.svg");
+}
+
+.button.previous-page {
+    background-image: url("../../content/icon/btn-prev-page.svg");
+}
+
+.button.next-page {
+    background-image: url("../../content/icon/btn-next-page.svg");
+}
+
+.button.last-page {
+    background-image: url("../../content/icon/btn-lastpage.svg");
+}
+
+.button.page-number {
+    line-height: 32px;
+    color: black;
+    /* background-color: #ccc; */
+    border-radius: 50%;
+    border: 1px solid #bbb;
+}
+
+.button.page-number.selected {
+    background-color: #019160 !important;
+    color: #fff;
+}
+
+.button.page-number:active {
+    background-color: #019160;
+    color: #fff;
+}
+
+.page-navigator .per-page-adjust {
+    margin-right: 12px;
+    margin-top: 13px;
+    padding-left: 10px;
+    height: 30px;
+    width: 140px;
+    line-height: 30px;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.page-navigator .per-page-adjust .count {
+    width: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.page-navigator .per-page-adjust .adjust-zone {
+    width: 15px;
+    display: block;
+    /* padding-top: 1px; */
+}
+
+
+/* .page-navigator .per-page-adjust .text {
+    width: fit-content;
+} */
+
+.page-navigator .per-page-adjust .adjust-zone .btn {
+    height: 15px;
+    width: 15px;
+    margin-left: 5px;
+    background-size: 13px 13px;
+    /* border: 1px solid #000; */
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+.page-navigator .per-page-adjust .adjust-zone .btn:hover {
+    background-color: #f2f2f2;
+}
+
+.page-navigator .per-page-adjust .adjust-zone .btn.increase {
+    background-position: center 3px;
+}
+
+.page-navigator .per-page-adjust .adjust-zone .btn.decrease {
+    background-position: center -3px;
+}

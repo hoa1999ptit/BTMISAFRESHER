@@ -1,0 +1,39 @@
+.required {
+    color: rgb(255, 0, 0);
+}
+
+.rot-180 {
+    transform: rotate(180deg);
+    transition: transform 1s;
+}
+
+.rot-0 {
+    transform: rotate(0deg);
+    transition: transform 1s;
+}
+
+.v-hidden {
+    visibility: hidden;
+}
+
+.v-visible {
+    visibility: visible;
+}
+
+.isshow {
+    visibility: visible;
+}
+
+.isnone {
+    display: none;
+    /* transition: 0.8s; */
+}
+
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.missing {
+    border: 1px solid red;
+}

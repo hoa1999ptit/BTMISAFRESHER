@@ -1,0 +1,106 @@
+.dropdown {
+    display: block;
+    width: 200px;
+    min-width: 150px;
+    height: 40px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.dropdown .choice {
+    display: flex;
+}
+
+.dropdown.isshow {
+    border: 1px solid #019160;
+}
+
+.dropdown .divtext {
+    height: 38px;
+    line-height: 38px;
+    width: calc(100% - 40px - 16px);
+    font-size: 13px;
+    padding-left: 16px;
+    box-sizing: border-box;
+}
+
+.dropdown .clearchoice {
+    margin-top: 10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #E9EBEE;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    visibility: hidden;
+    background-size: 12px 12px;
+}
+
+.dropdown .arrow-zone {
+    margin-top: 0;
+    height: 38px;
+    width: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.dropdown .arrow-zone .arrow {
+    height: 38px;
+    width: 40px;
+    background-image: url("../../content/icon/btn-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.dropdown .itemwrapper {
+    display: none;
+    margin-top: 1px;
+    height: auto;
+    /* max-height: 160px; */
+    width: 200px;
+    background-color: #fff;
+    border-radius: 4px;
+    line-height: 40px;
+    position: absolute;
+    left: inherit;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 1px #e5e5e5;
+    /* overflow: scroll;
+    overflow-x: hidden; */
+}
+
+.dropdown .itemwrapper .item {
+    font-size: 13px;
+    width: calc(100% - 36px);
+    padding-left: 36px;
+    background-image: unset;
+    background-size: 16px 16px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.dropdown .itemwrapper .item:hover {
+    background-color: #E9EBEE;
+}
+
+.dropdown .itemwrapper .item:active {
+    background-color: #019160;
+    color: #fff;
+    background-image: url("../../content/icon/tick.png");
+}
+
+.dropdown .itemwrapper .item.selected {
+    background-color: #019160;
+    color: #fff;
+    background-image: url("../../content/icon/tick.png");
+}

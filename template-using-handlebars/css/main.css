@@ -1,0 +1,29 @@
+@import url("../css/base/button.css");
+@import url("../css/base/field-input.css");
+@import url("../css/layout/header.css");
+@import url("../css/layout/menu.css");
+@import url("../css/layout/content.css");
+@import url("../css/layout/navigation.css");
+@import url("../css/base/popup.css");
+@import url("../css/common/format.css");
+@import url("../css/base/icon.css");
+@import url("../css/base/dropdown.css");
+@import url("../css/base/table.css");
+@import url("../css/base/message.css");
+body {
+    font-family: ggsans-regular;
+    font-size: 13px;
+    margin: 0;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+@font-face {
+    font-family: ggsans-regular;
+    src: url("../content/font/GoogleSans-Regular.otf");
+}
+
+@font-face {
+    font-family: ggsans-bold;
+    src: url("../content/font/GoogleSans-Bold.otf");
+}

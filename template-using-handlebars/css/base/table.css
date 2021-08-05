@@ -1,0 +1,125 @@
+table {
+    resize: both;
+}
+
+thead tr th:nth-child(5) {
+    text-align: center;
+}
+
+tr {
+    width: 100%;
+    height: 47px;
+    line-height: 47px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    white-space: nowrap;
+    background-color: #fff;
+}
+
+
+/* tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+} */
+
+tbody tr:hover {
+    background-color: #E9EBEE;
+}
+
+tbody tr::selection {
+    background-color: #EBF9F4;
+}
+
+tbody tr.selected {
+    background-color: #EBF9F4;
+}
+
+tbody td {
+    height: 48px;
+    min-width: 5px;
+    max-width: 120px;
+    padding: 0 0 0 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+tbody td.checkbox {
+    /* width: 42px !important; */
+    cursor: pointer;
+    margin: 0;
+    height: 16px;
+    width: 16px;
+}
+
+tbody td:nth-child(1) {
+    max-width: 4%;
+}
+
+tbody td:nth-child(2) {
+    max-width: 8%;
+}
+
+tbody td:nth-child(3) {
+    max-width: 15%;
+}
+
+tbody td:nth-child(4) {
+    max-width: 6%;
+}
+
+tbody td:nth-child(5) {
+    text-align: center;
+    max-width: 8%;
+}
+
+tbody td:nth-child(6) {
+    max-width: 8%;
+}
+
+tbody td:nth-child(7) {
+    max-width: 120px;
+}
+
+tbody td:nth-child(8) {
+    max-width: 12%;
+}
+
+tbody td:nth-child(9) {
+    max-width: 12%;
+}
+
+tbody td:nth-child(10) {
+    max-width: 12%;
+    text-align: right;
+}
+
+tbody td:nth-child(11) {
+    max-width: 15%;
+}
+
+tbody td.mydate {
+    text-align: center;
+}
+
+.money {
+    text-align: right;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

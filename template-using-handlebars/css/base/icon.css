@@ -2,6 +2,10 @@
     background-image: url("../../content/icon/add.png");
 }
 
+.icon-view {
+    background-image: url("../../content/icon/document-online.png");
+}
+
 .icon-avatar {
     background-image: url("../../content/icon/avatar-default.png");
 }

@@ -40,8 +40,8 @@ $('input[required]').blur(function() {
     } else {
         $(this).removeClass('missing');
     }
-    console.log(ip)
-})
+    console.log(ip);
+});
 
 function validateInputFormat() {
     let employeeCode = $('#EmployeeCode').val(),

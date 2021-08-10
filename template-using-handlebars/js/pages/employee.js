@@ -8,8 +8,8 @@ positionList = [];
 //Init function
 $(function() {
     loadAPIEmployee();
-    loadAPIDivision();
-    loadAPIPosition();
+    //loadAPIDivision();
+    //loadAPIPosition();
     // listenFilter();
 })
 
@@ -105,41 +105,50 @@ function loadDropdownPosition(itemList) {
  * load ra table
  */
 function loadTableEmployee(employeeList) {
-    var newrows = '';
-    employeeList.forEach((item, index) => {
-        if (item.DateOfBirth == null) {
-            item.DateOfBirth = new Date();
-        }
-        switch (item.WorkStatus) {
-            case 1:
-                item.WorkStatus = "Đã nghỉ việc"
-                break;
-            case 2:
-                item.WorkStatus = "Đang thử việc"
-                break;
-            case 3:
-                item.WorkStatus = "Đã làm việc"
-                break;
-            default:
-                item.WorkStatus = "Chưa rõ"
-        }
-        // debugger;
-        if (item.GenderName != ("Nam" || "Nữ")) item.GenderName = "Khác";
-        newrows += `<tr class empid=${item.EmployeeId}>
-                <td>${index + 1}</td>
-                <td value="${item.EmployeeId}">${item.EmployeeCode}</td>
-                <td>${item.FullName}</td>
-                <td>${item.GenderName}</td>
-                <td class="date">${CommonFn.formatDateDMY(item.DateOfBirth)}</td>
-                <td>${item.PhoneNumber}</td>
-                <td>${item.Email}</td>
-                <td>${item.PositionName}</td>
-                <td>${item.DepartmentName}</td>
-                <td class="money">${CommonFn.formatMoney(item.Salary)}</td>
-                <td>${item.WorkStatus}</td>
-                </tr>`
-    });
-    $(`#table-employee tbody`).append(newrows)
+    var templateText = $("#tableTemplate").html();
+
+    var tableTemplate = Handlebars.compile(templateText);
+
+    $("#employee").html(tableTemplate({ array: employeeList }));
+
+    // var newrows = '';
+    // employeeList.forEach((item, index) => {
+    //     if (item.DateOfBirth == null) {
+    //         item.DateOfBirth = new Date();
+    //     }
+    //     switch (item.WorkStatus) {
+    //         case 1:
+    //             item.WorkStatus = "Đã nghỉ việc"
+    //             break;
+    //         case 2:
+    //             item.WorkStatus = "Đang thử việc"
+    //             break;
+    //         case 3:
+    //             item.WorkStatus = "Đã làm việc"
+    //             break;
+    //         default:
+    //             item.WorkStatus = "Chưa rõ"
+    //     }
+    // //     debugger;
+    //     if (item.GenderName != ("Nam" || "Nữ")) item.GenderName = "Khác";
+    //     newrows += `<tr class empid=${item.EmployeeId}>
+    //             <td>${index + 1}</td>
+    //             <td value="${item.EmployeeId}">${item.EmployeeCode}</td>
+    //             <td>${item.FullName}</td>
+    //             <td>${item.GenderName}</td>
+    //             <td class="date">${CommonFn.formatDateDMY(item.DateOfBirth)}</td>
+    //             <td>${item.PhoneNumber}</td>
+    //             <td>${item.Email}</td>
+    //             <td>${item.PositionName}</td>
+    //             <td>${item.DepartmentName}</td>
+    //             <td class="money">${CommonFn.formatMoney(item.Salary)}</td>
+    //             <td>${item.WorkStatus}</td>
+    //             </tr>`
+    // });
+    // $(`#table-employee tbody`).append(newrows)
+
+
+
 }
 
 /**

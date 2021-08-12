@@ -60,3 +60,5 @@ D:\code\BTMISAFRESHER\4.API\MISA.CukCuk\MISA.CukCuk.Api\obj\Debug\net5.0\MISA.Cu
 D:\code\BTMISAFRESHER\4.API\MISA.CukCuk\MISA.CukCuk.Api\obj\Debug\net5.0\ref\MISA.CukCuk.Api.dll
 D:\code\BTMISAFRESHER\4.API\MISA.CukCuk\MISA.CukCuk.Api\obj\Debug\net5.0\MISA.CukCuk.Api.pdb
 D:\code\BTMISAFRESHER\4.API\MISA.CukCuk\MISA.CukCuk.Api\obj\Debug\net5.0\MISA.CukCuk.Api.genruntimeconfig.cache
+D:\code\BTMISAFRESHER\4.API\MISA.CukCuk\MISA.CukCuk.Api\obj\Debug\net5.0\MISA.CukCuk.Api.csproj.GenerateResource.cache
+D:\code\BTMISAFRESHER\4.API\MISA.CukCuk\MISA.CukCuk.Api\obj\Debug\net5.0\MISA.CukCuk.Api.Properties.Resources.resources

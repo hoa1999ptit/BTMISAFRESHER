@@ -8,9 +8,10 @@ positionList = [];
 //Init function
 $(function() {
     loadAPIEmployee();
-    //loadAPIDivision();
-    //loadAPIPosition();
-    // listenFilter();
+    loadAPIDivision();
+    loadAPIPosition();
+    listenFilter();
+
 })
 
 /**
@@ -105,6 +106,7 @@ function loadDropdownPosition(itemList) {
  * load ra table
  */
 function loadTableEmployee(employeeList) {
+
     var templateText = $("#tableTemplate").html();
 
     var tableTemplate = Handlebars.compile(templateText);
@@ -146,9 +148,6 @@ function loadTableEmployee(employeeList) {
     //             </tr>`
     // });
     // $(`#table-employee tbody`).append(newrows)
-
-
-
 }
 
 /**
@@ -179,8 +178,6 @@ $('.button.icon-refresh').click(function() {
     location.reload();
 })
 
-
-
 /**
  * Lắng nghe sự kiện click btn- Thêm nhân viên
  * Làm mờ div chính
@@ -188,9 +185,29 @@ $('.button.icon-refresh').click(function() {
 $(".button.add-employee").on("click", function() {
     getNewEmployeeCode();
     showEmployeeForm();
-
     console.log("clicked")
 });
+
+
+// hiện form thông tin nhân viên
+$(".button.view-employee").on("click", function() {
+    showEmployeeForm();
+});
+
+
+//// click 
+// $(document).ready(function() {
+//     $(document).on("click", "#table-employee tbody tr", function() {
+//         //some think
+//         EmployeeId = $(this).attr("empid");
+//         getEmployeeDetail(EmployeeId);
+//         showEmployeeForm();
+//         $('.popup .add-employee').attr('formmode', 1);
+//         console.log(employeeId);
+
+//     });
+// });
+
 
 /***
  * Hiện form thông tin nhân viên, làm mờ BG
@@ -200,7 +217,20 @@ function showEmployeeForm() {
     $(".main-section").addClass("disabledbutton");
     $(".popup.add-employee #EmployeeCode").focus();
     console.log($(".popup.add-employee #EmployeeCode").val())
-};
+}
+
+
+/**
+ * 
+ *  hiển thị thông tin nv được click
+ */
+function showEmployeeClicked(employeeId) {
+
+}
+
+
+
+
 
 /**
  * Đóng form thông tin nhân viên
@@ -212,16 +242,17 @@ $(".popup .btn-close,.button.btn-cancel").on("click", function() {
     $('.popup.add-employee').attr('formmode', 0);
 })
 
+
+//double click vào hàng trong bảng
 dbclickonEmployeeTR();
 
-
 /**
- * Lắng nghe sự kiện dbclick vào dòng thông tin nhân viên
+ * Lắng nghe sự kiện double click vào dòng thông tin nhân viên
  * Hiển thị form thông tin nhân viên
  * Cập nhật trạng thái formmode:0  (Thêm mới), 1(Cập nhật)
  */
 function dbclickonEmployeeTR() {
-    $('.table-employee tbody ').on('dblclick', 'tr', function() {
+    $(document).on('dblclick', "#table-employee tbody tr", function() {
         // thistd = $(this).find('td:eq(1)');
         EmployeeId = $(this).attr("empid");
         getEmployeeDetail(EmployeeId);
@@ -229,12 +260,14 @@ function dbclickonEmployeeTR() {
         $('.popup .add-employee').attr('formmode', 1);
         // $('.popup .add-employee').attr('empid', employeeId)  
         // Error Hiển thị nhân viên nằm ở đây, nhưng do async lỗi, chuyển vào trong getEmployeeDetail
-    })
+    });
 }
 /**
  * Hiển thị thông tin của nhân viên lên form, load các giá trị vào các trường, combobox
  * @param {Object chứa thông tin nhân viên} fe 
  */
+
+
 function displayEmployeeInfo(fe) {
     $('#EmployeeCode').val(fe.EmployeeCode);
     $('#FullName').val(fe.FullName);
@@ -250,7 +283,7 @@ function displayEmployeeInfo(fe) {
     } else if (fe.Gender == 1) {
         feGender = 'Nam';
     } else {
-        feGender = "Chưa nhập";
+        feGender = "Không xác định";
     }
     $('#GenderName').text(feGender);
     console.log("Position", positionList);
@@ -261,7 +294,6 @@ function displayEmployeeInfo(fe) {
             let thisdropdown = $('#PositionName').nParent(2);
             thisdropdown.find('.divtext').attr('value', fe.PositionId);
             thisdropdown.find(`.itemwrapper .item[value="${fe.PositionId}"]`).addClass('selected');
-
             console.log($('#PositionName').nParent(2).find('.divtext'))
         }
     })
@@ -288,7 +320,6 @@ function resetEmployeeForm() {
     me.find('input').val('');
     me.find('.dropdown').attr('value', -1);
     me.find('.item').removeClass('selected');
-
 }
 
 /**

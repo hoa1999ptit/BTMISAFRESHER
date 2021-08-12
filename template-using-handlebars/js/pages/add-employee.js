@@ -74,6 +74,9 @@ function validateInputFormat() {
  * Gửi dữ liệu đến API
  */
 
+
+
+// lưu thông tin nhân viên
 function saveEmployee() {
     myurl = '';
     mymethod = '';
@@ -147,7 +150,7 @@ function saveEmployee() {
     //     data: JSON.stringify(newEmployee),
     //     dataType: 'json',
     //     'contentType': 'application/json',
-    //     success: function() {
+    //     success: functio  () {
     //         alert(mess)
     //         location.reload();
     //     },

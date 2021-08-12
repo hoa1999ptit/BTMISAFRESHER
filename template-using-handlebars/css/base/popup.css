@@ -216,8 +216,19 @@
     background-color: #E9EBEE;
     margin-top: 12px;
     color: #000;
+    margin-left: 12px;
 }
 
 .footer .button.btn-cancel:hover {
+    background: #bbb;
+}
+
+.footer .button.btn-delete {
+    background-color: #F65454;
+    margin-top: 12px;
+    color: #000;
+}
+
+.footer .button.btn-delete:hover {
     background: #bbb;
 }

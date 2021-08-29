@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Api\\MISA.CukCuk.Api.csproj": {}
+    "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj": {}
   },
   "projects": {
-    "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Api\\MISA.CukCuk.Api.csproj": {
+    "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Api\\MISA.CukCuk.Api.csproj",
-        "projectName": "MISA.CukCuk.Api",
-        "projectPath": "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Api\\MISA.CukCuk.Api.csproj",
+        "projectUniqueName": "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj",
+        "projectName": "MISA.CukCuk.Core",
+        "projectPath": "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Core\\MISA.CukCuk.Core.csproj",
         "packagesPath": "C:\\Users\\nhokt\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Api\\obj\\",
+        "outputPath": "D:\\code\\BTMISAFRESHER\\4.API\\MISA.CukCuk\\MISA.CukCuk.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nhokt\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,20 +39,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.0.90, )"
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[1.3.11, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.1.5, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -64,9 +50,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

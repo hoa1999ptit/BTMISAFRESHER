@@ -82,13 +82,13 @@ function saveEmployee() {
     mymethod = '';
     var formmode = $('.popup.add-employee').attr('formmode');
     if (formmode == 0) {
-        myurl = "http://cukcuk.manhnv.net/v1/Employees/";
+        myurl = "/api/Employees";
         mymethod = "POST";
         mess = "Đã thêm mới nhân viên ";
     } else {
         console.log("Formmode:", $('.popup.add-employee').attr("formmode"))
         employeeId = $('.popup.add-employee').attr('empid');
-        myurl = "http://cukcuk.manhnv.net/v1/Employees/" + employeeId;
+        myurl = "/api​/Employees" + employeeId;
         mymethod = "PUT";
         mess = "Đã cập nhật thông tin nhân viên ";
     }
@@ -139,23 +139,25 @@ function saveEmployee() {
     newEmployee.salary = CommonFn.formatNumber($('#Salary').val());
     // newEmployee.workStatus = $('#WorkStatus').text();
     console.log(myurl, mymethod, $('#Salary').val(), newEmployee)
-    validateInputFormat();
-    // $.ajax({
-    //     headers: {
-    //         'Accept': 'application/json',
-    //         'Content-Type': 'application/json'
-    //     },
-    //     url: myurl,
-    //     method: mymethod,
-    //     data: JSON.stringify(newEmployee),
-    //     dataType: 'json',
-    //     'contentType': 'application/json',
-    //     success: functio  () {
-    //         alert(mess)
-    //         location.reload();
-    //     },
-    //     error: function(e) {
-    //         console.log("error", e);
-    //     }
-    // })
+    validateInputFormat(); // kiểm tra dữ liệu nhập vào
+
+
+    $.ajax({
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        url: myurl,
+        method: mymethod,
+        data: JSON.stringify(newEmployee),
+        dataType: 'json',
+        'contentType': 'application/json',
+        success: function() {
+            alert(mess)
+            location.reload();
+        },
+        error: function(e) {
+            console.log("error", e);
+        }
+    })
 }

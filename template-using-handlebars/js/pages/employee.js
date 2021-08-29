@@ -10,7 +10,7 @@ $(function() {
     loadAPIEmployee();
     loadAPIDivision();
     loadAPIPosition();
-    listenFilter();
+    // listenFilter();
 
 })
 
@@ -21,7 +21,7 @@ $(function() {
 function loadAPIEmployee() {
     $.ajax({
         type: "GET",
-        url: "http://cukcuk.manhnv.net/v1/Employees",
+        url: "/api/Employees",
         success: function(result) {
             if (result != null) {
                 employeeList = result;
